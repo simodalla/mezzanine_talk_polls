@@ -1,8 +1,15 @@
+# -*- coding: utf-8 -*-
+from __future__ import unicode_literals, absolute_import
+
 from copy import deepcopy
+
 from django.contrib import admin
+
 from mezzanine.core.admin import TabularDynamicInlineAdmin
 from mezzanine.pages.admin import PageAdmin
+
 from .models import Poll, Choice
+
 
 poll_extra_fieldsets = ((None, {"fields": ("pub_date",)}),)
 

@@ -1,4 +1,8 @@
+# -*- coding: utf-8 -*-
+from __future__ import unicode_literals, absolute_import
+
 from django.db import models
+
 from mezzanine.pages.models import Page
 
 # The members of Page will be inherited by the Poll
@@ -15,6 +19,6 @@ class Poll(Page):
 
 
 class Choice(models.Model):
-    poll = models.ForeignKey("Poll")
+    poll = models.ForeignKey(Poll)
     choice_text = models.CharField(max_length=200)
     votes = models.IntegerField(default=0)
